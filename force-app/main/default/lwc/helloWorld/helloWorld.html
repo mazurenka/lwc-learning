@@ -2,7 +2,15 @@
 
     <!-- <div>{getNum}</div> -->
 
-    <input type="text" onkeyup={onchangeHandler} />
-    <div>{fullname} is a course of {title}</div>
+
+    <lightning-card  title="Two way data binding">
+        <div class="slds-m-around_medium">
+        <lightning-input type="text" 
+            label="Enter some text" 
+            onkeyup={onchangeHandler}>
+        </lightning-input>
+            <div>{fullname} is a course of {title}</div>
+            </div>
+        </lightning-card>
 
 </template>
