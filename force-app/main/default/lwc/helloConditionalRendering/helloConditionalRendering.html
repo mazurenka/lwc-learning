@@ -1,12 +1,23 @@
 <template>
     <lightning-card title="Conditional Rendering">
         <div class="slds-m-around_medium">
-            <lightning-button variant="brand" label="Show Data" title="Show Data" onclick={handleClick}
+            <lightning-button variant="brand" label="Don't CLICK!" title="Show Data" onclick={handleClick}
                 class="slds-m-left_x-small">
             </lightning-button>
             <template if:true={isVisible}>
-                <div>Welcome to my Project</div>
+                <div>You naughty little child!</div>
             </template>
+            <template if:false={isVisible}>
+                <div>Don't click the button! :)</div>
+            </template>
+
+            <lightning-input type="text" label="Type Sorry to see the data" onkeyup={changeHandler}>
+            </lightning-input>
+            <template lwc:if={helloMethod}>
+                <div>Okay, I forgive you</div>
+            </template>
+
+
         </div>
     </lightning-card>
 </template>
