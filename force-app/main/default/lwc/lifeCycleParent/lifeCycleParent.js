@@ -15,4 +15,10 @@ export default class LifeCycleParent extends LightningElement {
     handleClick() {
         this.isChildVisible = !this.isChildVisible
     }
+
+    errorCallback(error, stack) {
+        console.log(error.message)
+        console.log(stack)
+    }
+
 }

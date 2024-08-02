@@ -9,6 +9,7 @@ export default class LifeCycleChild extends LightningElement {
     interval
     connectedCallback() {
         console.log('child connected callback called')
+        throw new Error('Loading of Child Component failed')
     }
     renderedCallback() {
         console.log('child rendered callback called')
